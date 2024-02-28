@@ -3,7 +3,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-[20fr_80fr] h-screen">
+    <div className="grid grid-cols-[17fr_83fr] h-screen">
       {/* Sidebar */}
       <Sidebar />
       <div>
