@@ -50,10 +50,12 @@ function Sidebar() {
         {SIDEBARITEMS.map((item) => {
           return (
             <SidebarItem
+              key={item.title}
               title={item.title}
               img={item.img}
               href={item.href}
               down={item.down}
+              alt={item.title}
             />
           );
         })}

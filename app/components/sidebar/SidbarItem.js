@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function SidebarItem({ title, img, href, down }) {
+function SidebarItem({ title, img, href, down, alt }) {
   const pathname = usePathname();
   return (
     <li
@@ -13,7 +13,13 @@ function SidebarItem({ title, img, href, down }) {
       }`}
     >
       <Link href={href} className="flex">
-        <Image src={img} width={20} height={21} className={`inline mr-2 `} />
+        <Image
+          src={img}
+          width={20}
+          height={21}
+          className={`inline mr-2 `}
+          alt={alt}
+        />
         <p className="flex gap-2 align-middle">
           <span>{title}</span> <img src={down} className="mt-[3px]" />
         </p>

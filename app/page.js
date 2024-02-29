@@ -16,6 +16,7 @@ export default function Home() {
                 width={16}
                 height={16}
                 className="absolute left-6 top-[13px]"
+                alt="logo"
               />
               <input
                 type="text"
@@ -24,12 +25,12 @@ export default function Home() {
               />
             </div>
             <div className="flex gap-6">
-              <Image src={"/flag.svg"} width={24} height={21} />
-              <Image src={"/bell.svg"} width={24} height={21} />
+              <Image src={"/flag.svg"} width={24} height={21} alt="image" />
+              <Image src={"/bell.svg"} width={24} height={21} alt="image" />
               <div className="flex gap-2 align-middle justify-center text-black">
-                <Image src={"/user.svg"} width={24} height={21} />
+                <Image src={"/user.svg"} width={24} height={21} alt="image" />
                 <p className="mt-[8px]">Sid</p>
-                <Image src={"/shape.svg"} width={8} height={6} />
+                <Image src={"/shape.svg"} width={8} height={6} alt="image" />
               </div>
             </div>
           </div>
