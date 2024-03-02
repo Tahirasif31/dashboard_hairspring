@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/sidebar/Sidebar";
+import Nav from "@/components/nav/nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="grid grid-cols-[17fr_83fr] h-screen">
+          <Sidebar />
+          <div>
+            <Nav />
+            <div className="py-10 px-12">{children}</div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
