@@ -2,6 +2,10 @@ import Header from "./_components/Header";
 import InventoryDataItem from "./_components/InventoryDataItem";
 import InventroyDataList from "./_components/InventoryDataList";
 import InventoryTitle from "./_components/InventoryTitle";
+import TableBody from "./_components/TableBody";
+import TableDataRow from "./_components/TableDataRow";
+import TableHead from "./_components/TableHead";
+import TableTitleRow from "./_components/TableTitleRow";
 
 const INVENTORY = [
   {
@@ -35,32 +39,15 @@ function Inventorylist() {
     <div>
       <Header />
       <InventoryTitle />
-      {/* <InventroyDataList>
-        <InventoryDataItem />
-      </InventroyDataList> */}
-      <table>
-        <thead>
-          <tr className="flex gap-24">
-            <th>S.No</th>
-            <th>Model</th>
-            <th>Brand</th>
-            <th>Stock</th>
-            <th>Full Set/Naked</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
+      <table className="w-[100%]">
+        <TableHead>
+          <TableTitleRow />
+        </TableHead>
+        <TableBody>
           {INVENTORY.map((item, index) => (
-            <tr className="flex gap-24" key={index}>
-              <td>{item.sno}</td>
-              <td>{item.model}</td>
-              <td>{item.brand}</td>
-              <td>{item.stock}</td>
-              <td>{item.fullset}</td>
-              <td>${item.price.toFixed(2)}</td>
-            </tr>
+            <TableDataRow index={index} item={item} />
           ))}
-        </tbody>
+        </TableBody>
       </table>
     </div>
   );
