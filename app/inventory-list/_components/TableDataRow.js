@@ -1,7 +1,10 @@
-function TableDataRow({ index, item }) {
+"use client";
+import Menu from "./Menu";
+
+function TableDataRow({ index, item, openMenu, setOpenMenu }) {
   return (
     <tr
-      className="grid grid-cols-6 gap-7 whitespace-nowrap justify-between text-[16px] font-[600] mt-8 pl-2 items-center"
+      className="grid grid-cols-6 gap-7 whitespace-nowrap justify-between text-[16px] font-[600] mt-8 pl-2 items-center relative"
       key={index}
     >
       <td className="justify-self-start text-[14px] font-[400] text-[#00000082]">
@@ -24,7 +27,12 @@ function TableDataRow({ index, item }) {
       <td className="justify-self-start text-[14px] font-[400] text-[#00000082] whitespace-nowrap">
         <div className="flex gap-8 items-center">
           ${item.price.toFixed(2)}
-          <img src="/threedots.svg" />
+          <img
+            src="/threedots.svg"
+            className="cursor-pointer"
+            onClick={() => setOpenMenu(!openMenu)}
+          />
+          {openMenu ? <Menu /> : ""}
         </div>
       </td>
     </tr>

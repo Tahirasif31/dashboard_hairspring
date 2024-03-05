@@ -1,6 +1,7 @@
+"use client";
+
+import { useState } from "react";
 import Header from "./_components/Header";
-import InventoryDataItem from "./_components/InventoryDataItem";
-import InventroyDataList from "./_components/InventoryDataList";
 import InventoryTitle from "./_components/InventoryTitle";
 import TableBody from "./_components/TableBody";
 import TableDataRow from "./_components/TableDataRow";
@@ -35,6 +36,17 @@ const INVENTORY = [
 ];
 
 function Inventorylist() {
+  const [openMenus, setOpenMenus] = useState(
+    Array(INVENTORY.length).fill(false)
+  );
+
+  // Function to toggle the menu for a specific item
+  const toggleMenu = (index) => {
+    const updatedOpenMenus = [...openMenus];
+    updatedOpenMenus[index] = !updatedOpenMenus[index];
+    setOpenMenus(updatedOpenMenus);
+  };
+
   return (
     <div>
       <Header />
@@ -45,7 +57,13 @@ function Inventorylist() {
         </TableHead>
         <TableBody>
           {INVENTORY.map((item, index) => (
-            <TableDataRow index={index} item={item} />
+            <TableDataRow
+              className="inline"
+              index={index}
+              item={item}
+              openMenu={openMenus[index]}
+              setOpenMenu={() => toggleMenu(index)}
+            />
           ))}
         </TableBody>
       </table>
