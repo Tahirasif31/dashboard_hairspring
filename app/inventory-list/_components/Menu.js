@@ -2,19 +2,19 @@ function Menu() {
   return (
     <div className="flex flex-col absolute top-8 right-[75px] bg-white z-10 w-[183px] gap-2 shadow-lg rounded-md">
       <div className="flex gap-3 border-b-2 py-2 px-2 mx-2 text-[12px] text-[#000000] font-[400] leading-[20px]">
-        <img src="/eye.svg" />
+        <img src="/eye.svg" alt="preview" />
         <span>Preview</span>
       </div>
       <div className="flex gap-3 border-b-2 py-2 px-2 mx-2 text-[12px] text-[#000000] font-[400] leading-[20px]">
-        <img src="/edit.svg" />
+        <img src="/edit.svg" alt="edit" />
         <span>Edit</span>
       </div>
       <div className="flex gap-3 border-b-2 py-2 px-2 mx-2 text-[12px] text-[#000000] font-[400] leading-[20px]">
-        <img src="/delete.svg" />
+        <img src="/delete.svg" alt="delete" />
         <span>Delete</span>
       </div>
       <div className="flex gap-3 border-b-2 py-2 px-2 mx-2 text-[12px] text-[#000000] font-[400] leading-[20px]">
-        <img src="/eye.svg" />
+        <img src="/eye.svg" alt="preview" />
         <span>Save as Draft</span>
       </div>
     </div>

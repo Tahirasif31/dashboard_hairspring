@@ -58,6 +58,7 @@ function Inventorylist() {
         <TableBody>
           {INVENTORY.map((item, index) => (
             <TableDataRow
+              key={index}
               className="inline"
               index={index}
               item={item}

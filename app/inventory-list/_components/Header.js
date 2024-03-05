@@ -12,9 +12,9 @@ function Header() {
         </div>
       </div>
       <div className="flex gap-8">
-        <img src="/inventorysearch.svg" />
-        <img src="/printer.svg" />
-        <img src="/addnewproduct.svg" />
+        <img src="/inventorysearch.svg" alt="inventory" />
+        <img src="/printer.svg" alt="printer" />
+        <img src="/addnewproduct.svg" alt="add new porduct" />
       </div>
     </header>
   );

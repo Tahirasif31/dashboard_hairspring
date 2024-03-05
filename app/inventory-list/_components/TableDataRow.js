@@ -30,6 +30,7 @@ function TableDataRow({ index, item, openMenu, setOpenMenu }) {
           <img
             src="/threedots.svg"
             className="cursor-pointer"
+            alt="menu"
             onClick={() => setOpenMenu(!openMenu)}
           />
           {openMenu ? <Menu /> : ""}

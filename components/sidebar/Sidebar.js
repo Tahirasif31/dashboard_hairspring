@@ -50,6 +50,7 @@ function Sidebar() {
         width={180}
         height={70}
         className="mx-auto mt-[29px]"
+        alt="logo"
       />
       <SidebarList>
         {SIDEBARITEMS.map((item) => {
