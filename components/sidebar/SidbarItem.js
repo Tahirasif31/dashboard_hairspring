@@ -38,7 +38,6 @@ function SidebarItem({ id, title, img, href, down, alt, childrens }) {
             src={down}
             className="mt-[3px] cursor-pointer"
             onClick={() => toggleSection(id)}
-            alt="down"
           />
         </p>
       </div>
