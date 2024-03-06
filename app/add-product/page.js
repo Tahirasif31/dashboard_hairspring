@@ -1,3 +1,5 @@
+import ImageUploader from "./_component/ImageUploader";
+
 function AddProduct() {
   return (
     <div>
@@ -33,8 +35,8 @@ function AddProduct() {
               className="w-[100%] border-solid border-2 border-[#E0E0E0] rounded-[10px] py-4 px-12"
             />
           </div>
-          <div className="pt-7">
-            <p className="text-[16px] font-[500] px-6 pb-2">Description</p>
+          <div className="pt-8">
+            <p className="text-[16px] font-[500] px-6 pb-4">Description</p>
             <div className="rounded-tl-[20px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[10px] border-solid border-2 border-[#E0E0E0]">
               <div>
                 <div className="flex gap-2">
@@ -67,6 +69,15 @@ function AddProduct() {
                 />
               </div>
             </div>
+          </div>
+          <div className="pt-8">
+            <p className="text-[16px] font-[500] px-6 pb-4">Add Cover Image</p>
+            <ImageUploader />
+
+            {/* <div className="w-[100%] h-[461px] bg-[#F5F5F5] border-dashed border-2 border-[#00000038] rounded-[10px] ">
+              <label>Drop files here</label>
+              <input className="hidden" type="file" accept="image/*" /> 
+            </div>*/}
           </div>
         </div>
       </div>
