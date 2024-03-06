@@ -36,15 +36,11 @@ const INVENTORY = [
 ];
 
 function Inventorylist() {
-  const [openMenus, setOpenMenus] = useState(
-    Array(INVENTORY.length).fill(false)
-  );
+  const [openMenuIndex, setOpenMenuIndex] = useState(null);
 
   // Function to toggle the menu for a specific item
   const toggleMenu = (index) => {
-    const updatedOpenMenus = [...openMenus];
-    updatedOpenMenus[index] = !updatedOpenMenus[index];
-    setOpenMenus(updatedOpenMenus);
+    setOpenMenuIndex(openMenuIndex === index ? null : index);
   };
 
   return (
@@ -62,7 +58,7 @@ function Inventorylist() {
               className="inline"
               index={index}
               item={item}
-              openMenu={openMenus[index]}
+              openMenu={openMenuIndex === index}
               setOpenMenu={() => toggleMenu(index)}
             />
           ))}

@@ -31,9 +31,9 @@ function TableDataRow({ index, item, openMenu, setOpenMenu }) {
             src="/threedots.svg"
             className="cursor-pointer"
             alt="menu"
-            onClick={() => setOpenMenu(!openMenu)}
+            onClick={setOpenMenu}
           />
-          {openMenu ? <Menu /> : ""}
+          {openMenu && <Menu />}
         </div>
       </td>
     </tr>
