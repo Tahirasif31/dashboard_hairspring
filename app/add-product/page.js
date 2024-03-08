@@ -4,13 +4,15 @@ function AddProduct() {
   return (
     <div>
       <div className="flex justify-between">
-        <h2>ADD NEW PRODUCT</h2>
+        <h2 className="family-Poppins text-[16px] font-[600] text-[#495057]">
+          ADD NEW PRODUCT
+        </h2>
         <div>breadcrum</div>
       </div>
-      <div className="grid grid-cols-[20fr_80fr] gap-2">
+      <div className="grid grid-cols-[20fr_80fr] gap-3 mt-5">
         <div>
-          <h3 className="text-[24px] font-[400]">Details</h3>
-          <p className="text-[16px] font-[400]">
+          <h3 className="text-[24px] font-[400] family-Poppins">Details</h3>
+          <p className="text-[16px] font-[400] text-[#0000007D] mt-1">
             Title, short description, image.
           </p>
         </div>
@@ -78,6 +80,39 @@ function AddProduct() {
               <label>Drop files here</label>
               <input className="hidden" type="file" accept="image/*" /> 
             </div>*/}
+          </div>
+          <div className="pt-8">
+            <p className="text-[16px] font-[500] px-6 pb-4">Add Galery</p>
+            <div className="flex justify-between ">
+              <div className="flex flex-col rounded-[5px] bg-white shadow-lg py-5 px-2 xl:px-3 items-center">
+                <img src="/add.svg" width={11} height={11} className="mb-2" />
+                <span className="text-[12px] leading-[14.4px] font-[500] family-Lato">
+                  <p className="text-center leading-[14.4px]">Upload</p>
+                  <p className="leading-[14.4px]">Image here</p>
+                </span>
+              </div>
+              <div className="align-middle rounded-[5px] bg-white shadow-lg px-[22px] 2xl:px-9 xl:px-7 border-[1px] border-solid border-[#0000002f]">
+                <img src="/imgadd.svg" className="mt-7" />
+              </div>
+              <div className="align-middle rounded-[5px] bg-white shadow-lg px-[22px] 2xl:px-9 xl:px-7 border-[1px] border-solid border-[#0000002f]">
+                <img src="/imgadd.svg" className="mt-7" />
+              </div>
+              <div className="align-middle rounded-[5px] bg-white shadow-lg px-[22px] 2xl:px-9 xl:px-7 border-[1px] border-solid border-[#0000002f]">
+                <img src="/imgadd.svg" className="mt-7" />
+              </div>
+              <div className="align-middle rounded-[5px] bg-white shadow-lg px-[22px] 2xl:px-9 xl:px-7 border-[1px] border-solid border-[#0000002f]">
+                <img src="/imgadd.svg" className="mt-7" />
+              </div>
+              <div className="align-middle rounded-[5px] bg-white shadow-lg px-[22px] 2xl:px-9 xl:px-7 border-[1px] border-solid border-[#0000002f]">
+                <img src="/imgadd.svg" className="mt-7" />
+              </div>
+              <div className="align-middle rounded-[5px] bg-white shadow-lg px-[22px] 2xl:px-9 xl:px-7 border-[1px] border-solid border-[#0000002f]">
+                <img src="/imgadd.svg" className="mt-7" />
+              </div>
+              <div className="align-middle rounded-[5px] bg-white shadow-lg px-[22px] 2xl:px-9 xl:px-7 border-[1px] border-solid border-[#0000002f]">
+                <img src="/imgadd.svg" className="mt-7" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
