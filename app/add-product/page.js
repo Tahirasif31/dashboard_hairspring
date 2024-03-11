@@ -1,4 +1,6 @@
 import ImageUploader from "./_component/ImageUploader";
+import Input from "./_component/Input";
+import SelectInput from "./_component/SelectInput";
 
 function AddProduct() {
   return (
@@ -17,26 +19,13 @@ function AddProduct() {
           </p>
         </div>
         <div className="border-2 border-solid border-[#D2CDCD54] px-6 py-8 rounded-[20px] shadow-md">
-          <div className="relative">
-            <label className="px-2 absolute top-[-12px] left-8 bg-white text-[16px] font-[500] font-Lato">
-              Product Name
-            </label>
-            <input
-              type="text"
-              placeholder="Title"
-              className="w-[100%] border-solid border-2 border-[#E0E0E0] rounded-[10px] py-4 px-12"
-            />
-          </div>
-          <div className="relative mt-8">
-            <label className="px-2 absolute top-[-12px] left-8 bg-white text-[16px] font-[500] font-Lato">
-              Regular Price
-            </label>
-            <input
-              type="text"
-              placeholder="$  0.00"
-              className="w-[100%] border-solid border-2 border-[#E0E0E0] rounded-[10px] py-4 px-12"
-            />
-          </div>
+          <Input label={"Product Name"} type={"text"} placeholder={"Title"} />
+          <Input
+            label={"Regular Price"}
+            type={"text"}
+            placeholder={"$  0.00"}
+            className={"mt-8"}
+          />
           <div className="pt-8">
             <p className="text-[16px] font-[500] px-6 pb-4">Description</p>
             <div className="rounded-tl-[20px] rounded-tr-[20px] rounded-br-[10px] rounded-bl-[10px] border-solid border-2 border-[#E0E0E0]">
@@ -114,6 +103,91 @@ function AddProduct() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-[20fr_80fr] gap-3 mt-5">
+        <div>
+          <h3 className="text-[24px] font-[400] family-Poppins">Properties</h3>
+          <p className="text-[16px] font-[400] text-[#0000007D] mt-1">
+            Additional Functions and Attributes.
+          </p>
+        </div>
+        <div className="border-2 border-solid border-[#D2CDCD54] px-6 py-8 rounded-[20px] shadow-md">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-6 ">
+            <Input label={"Stock"} type={"text"} placeholder={"0"} />
+            <Input label={"Product SKU"} type={"text"} placeholder={"0"} />
+            <SelectInput label={"Set"}>
+              <option disabled selected>
+                Full Set / Naked
+              </option>
+              <option>Full Set</option>
+              <option>Naked</option>
+            </SelectInput>
+            <SelectInput label={"Brand"}>
+              <option disabled selected>
+                Select Brand
+              </option>
+              <option>x</option>
+              <option>y</option>
+            </SelectInput>
+            <Input label={"Color"} type={"text"} placeholder={"Color"} />
+            <SelectInput label={"Type"}>
+              <option selected>New</option>
+              <option>Used</option>
+            </SelectInput>
+            <Input label={"Condition"} type={"text"} placeholder={"AA"} />
+            <Input label={"Age"} type={"text"} placeholder={"2023"} />
+            <SelectInput label={"Box"}>
+              <option disabled selected>
+                Yes / No
+              </option>
+              <option>Yes</option>
+              <option>No</option>
+            </SelectInput>
+            <SelectInput label={"Movements"}>
+              <option>xx</option>
+              <option>yy</option>
+            </SelectInput>
+            <Input label={"Case Size"} type={"text"} placeholder={"43 mm"} />
+            <SelectInput label={"Case"}>
+              <option disabled selected>
+                Select Case
+              </option>
+              <option>xxx</option>
+            </SelectInput>
+            <Input label={"Dial"} type={"text"} placeholder={"Black"} />
+            <SelectInput label={"Bracelet"}>
+              <option disabled selected>
+                Select Bracelet Type
+              </option>
+            </SelectInput>
+          </div>
+          <Input
+            label={"Tags"}
+            type={"text"}
+            placeholder={"Add Tags"}
+            className={"mt-6"}
+          />
+          <div className="px-3 p-6">
+            <p className="text-[16px] text-[#00271C] font-[500] leading-[24px]">
+              Gender
+            </p>
+            <span className="flex gap-4 w-[220px] text-[16px] text-[#00271C] font-[500]">
+              <span className="flex gap-2">
+                <input type="checkbox" id="male" />
+                <label for="male">Male</label>
+              </span>
+              <span className="flex gap-2">
+                <input type="checkbox" id="female" />
+                <label for="female">Female</label>
+              </span>
+              <span className="flex gap-2">
+                <input type="checkbox" id="kids" />
+                <label for="kids">Kids</label>
+              </span>
+            </span>
+          </div>
+          <div class="border-t border-dashed border-gray-400 my-4 mx-3"></div>
         </div>
       </div>
     </div>
